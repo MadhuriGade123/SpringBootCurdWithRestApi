@@ -1,0 +1,12 @@
+package com.BikkadIT.service;
+
+import java.util.List;
+
+import com.BikkadIT.model.Employee;
+
+public interface ServiceI {
+
+	public Employee saveEmp(Employee employee);
+	public List<Employee>getAllEmp(List<Employee> employee);
+	public List<Employee>loginCheck(String name,Integer id);
+}

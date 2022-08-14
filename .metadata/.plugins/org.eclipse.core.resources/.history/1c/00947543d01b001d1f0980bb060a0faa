@@ -1,0 +1,13 @@
+package com.BikkadIT.dao;
+
+import java.util.List;
+
+import com.BikkadIT.model.Employee;
+
+public interface EmployeeDaoI {
+	public Employee saveEmpDao(Employee employee);
+	public List<Employee>getAllEmployeeDao(List<Employee> employee);
+	public List<Employee>LoginCheck(String name,Integer id);
+
+
+}

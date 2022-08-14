@@ -1,0 +1,40 @@
+package com.BikkadIT.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.BikkadIT.dao.EmployeeDaoI;
+import com.BikkadIT.model.Employee;
+@Service
+public class ServiceImpl implements ServiceI {
+	@Autowired
+	private EmployeeDaoI empDaoI;
+
+	@Override
+	public Employee saveEmp(Employee employee) {
+		System.out.println("Service Layer");
+		System.out.println(employee);
+		Employee id =empDaoI.saveEmpDao(employee);
+	
+		System.out.println(id);
+		return id;
+	}
+
+	@Override
+	public List<Employee> getAllEmp(List<Employee> employee) {
+		List<Employee> list = empDaoI.getAllEmployeeDao(employee);
+		return list;
+	}
+
+	@Override
+	public List<Employee> loginCheck(String name, Integer id) {
+		List<Employee> list = empDaoI.LoginCheck();
+		return list;
+	}
+
+	}
+
+	
+

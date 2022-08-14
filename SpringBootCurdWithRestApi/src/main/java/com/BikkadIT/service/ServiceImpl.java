@@ -14,20 +14,28 @@ public class ServiceImpl implements ServiceI {
 
 	@Override
 	public Employee saveEmp(Employee employee) {
-		
-		return null;
+		System.out.println("Service Layer");
+		System.out.println(employee);
+		Employee id =empDaoI.saveEmpDao(employee);
+	
+		System.out.println(id);
+		return id;
 	}
 
 	@Override
-	public List<Employee> saveAllEmp(List<Employee> employee) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Employee> getAllEmp(List<Employee> employee) {
+		List<Employee> list = empDaoI.getAllEmployeeDao(employee);
+		return list;
 	}
 
 	@Override
-	public List<Employee> getAllEmp() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Employee> loginCheck(Integer id, String name) {
+		List<Employee> list = empDaoI.LoginCheck(id, name);
+		return list;
+	}
 	}
 
-}
+	
+
+	
+

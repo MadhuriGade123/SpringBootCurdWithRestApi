@@ -7,6 +7,6 @@ import com.BikkadIT.model.Employee;
 public interface ServiceI {
 
 	public Employee saveEmp(Employee employee);
-	public List<Employee>saveAllEmp(List<Employee> employee);
-	public List<Employee>getAllEmp();
+	public List<Employee>getAllEmp(List<Employee> employee);
+	public List<Employee>loginCheck(Integer id,String name);
 }
